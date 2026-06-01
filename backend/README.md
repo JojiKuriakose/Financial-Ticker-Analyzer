@@ -10,8 +10,8 @@ This folder contains the FastAPI backend and modular service code for the Financ
 - `requirements.txt` — Python dependencies used for the backend.
 - `src/` — application package
 	- `src/config` — environment/config helpers
-	- `src/telemetry.py` — OpenTelemetry + Azure Monitor helpers
-	- `src/services` — data fetchers (`fetch_stock_data`, `fetch_latest_news`)
+	- `src/services/telemetry.py` — OpenTelemetry + Azure Monitor helpers
+	- `src/services/fetch_data.py` — data fetchers (`fetch_stock_data`, `fetch_latest_news`)
 	- `src/agents` — agent factories and manager (Trend/News/Decision)
 	- `src/routes` — FastAPI routers (e.g. `analyze`)
 
@@ -23,7 +23,7 @@ Create a `.env` at the backend root or set environment variables in your environ
 - `APPLICATIONINSIGHTS_CONNECTION_STRING` — (optional) App Insights connection string for telemetry
 
 If using `DefaultAzureCredential` (recommended for non-local flows) you may also need:
-- `AZURE_CLIENT_ID`, `AZURE_TENANT_ID`, `AZURE_CLIENT_SECRET` — for service principal authentication
+- `Managed Identity` — for service principal authentication
 
 ## Install dependencies
 
@@ -65,8 +65,4 @@ curl -X POST http://localhost:8000/analyze/HAL.NS
 - The app uses `DefaultAzureCredential` to authenticate with Azure. For local testing you can run `az login` (Azure CLI) or supply client credentials in env variables.
 - Agent creation is performed in the FastAPI lifespan; startup may take a few seconds while agents are created on your Azure project.
 
-## Where to look next
-
-- Implement additional routes in `src/routes`.
-- Add unit tests (mock `agent_client`) and CI tasks.
 
