@@ -1,0 +1,24 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "azure-ai-agents>=1.1.0",
+    "azure-identity>=1.25.1",
+    "azure-monitor-opentelemetry-exporter>=1.0.0b48",
+    "dotenv>=0.9.9",
+    "duckduckgo-search>=8.1.1",
+    "fastapi>=0.128.6",
+    "numpy>=2.4.2",
+    "opentelemetry-api>=1.39.0",
+    "opentelemetry-instrumentation-fastapi>=0.60b0",
+    "opentelemetry-instrumentation-logging>=0.60b0",
+    "opentelemetry-instrumentation-requests>=0.60b0",
+    "opentelemetry-sdk>=1.39.0",
+    "pandas>=3.0.0",
+    "python-dotenv>=1.2.1",
+    "uvicorn>=0.40.0",
+    "yfinance>=1.1.0",
+]
