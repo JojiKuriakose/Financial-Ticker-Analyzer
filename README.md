@@ -40,9 +40,10 @@ This solution transforms financial analysis from a time-consuming manual process
 ## Tech Stack
 - **Frontend**: Streamlit
 - **Backend**: Python, FastAPI, uvicorn
-- **AI/ML**: Microsoft Foundry Agents, Azure Identity, LLM
+- **AI/ML**: Microsoft Foundry Agents, Azure Identity, 
 - **External API**: yfinance, DuckDuckGo Search
 - **Observability**: OpenTelemetry, Azure Monitor
+- **Deployment**: Azure Web Apps
 
 ## Key Features
 ✅ **Speed** - Complete analysis in seconds vs. hours of manual research<br>
@@ -61,9 +62,10 @@ This solution transforms financial analysis from a time-consuming manual process
 <br>
 
 ## Metrics
-- **Server Reponse Time(latency-p95)**: 2.62 mins<br>
+- **Server Reponse Time(latency-p95)**: 2.62s<br>
 - **Prompt token count**: 670 avg per request(3.35K)[no. of requests=5]<br>
 - **Completion token count**: 1045 avg per request(5.22K)[no. of requests=5]<br>
+- **Cost per Request**:
 
 
 
